@@ -10,9 +10,10 @@ const TodoForm = ({addTodo}) => {
 
   function handleSubmit(e) {
     e.preventDefault()
-
-    addTodo(value)
-    setValue("")
+    if(value !== ""){
+      addTodo(value)
+      setValue("")
+    }
   }
 
   return (
